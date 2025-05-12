@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 
 export default function Home({ navigation }) {
 
@@ -14,7 +15,7 @@ export default function Home({ navigation }) {
 
             <Header />
 
-            <View style={styles.Groupbutton}>
+            <View style={styles.groupbutton}>
                 <TouchableOpacity onPress={() => navigation.navigate('Android')} >
                     <Text style={styles.textButton} >Android</Text>
                 </TouchableOpacity>
@@ -22,6 +23,8 @@ export default function Home({ navigation }) {
                     <Text style={styles.textButton}>IOS</Text>
                 </TouchableOpacity>
             </View>
+
+
             <Footer />
         </View>
     );
@@ -30,17 +33,19 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
 
     container: {
-        flex: 1,    
+        flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-  
+        borderLeftWidth: 15,
+        borderRightWidth: 15,
+        borderColor: '#074073'
     },
 
-    Groupbutton: {
+    groupbutton: {
         width: '80%',
         flex: 2,
         justifyContent: 'center',
- 
+
     },
 
     textButton: {

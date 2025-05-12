@@ -4,24 +4,21 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Header() {
     return (
 
-        <View style={styles.containerHeader}  >
+        <View style={headerStyles.containerHeader}  >
             <StatusBar style="auto" />
-            <Text style={styles.titleHeader}>Sistemas Operacionais {'\n'} Mobile </Text>
+            <Text style={headerStyles.titleHeader}>Sistemas Operacionais  {'\n'} Mobile📱</Text>
         </View>
 
     );
 }
 
-const styles = StyleSheet.create({
+const headerStyles = StyleSheet.create({
 
     containerHeader: {
-        position: 'absolute',
         width: '100%',
         height: '25%',
         backgroundColor: '#074073'
-        /* borderWidth: 2,
-        border: 'solid',
-        borderColor: 'red', */
+       
     },
 
     titleHeader: {
