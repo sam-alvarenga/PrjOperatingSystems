@@ -4,11 +4,11 @@ import { Text, View, StyleSheet, SafeAreaView, Image, ScrollView, } from "react-
 
 import Button from './../components/Button';
 
-export default function Android({navigation}) {
+export default function Android({ navigation }) {
     return (
 
         <SafeAreaView style={androidIosStyles.containerInfo}>
-            <ScrollView style={androidIosStyles.info}>
+            <ScrollView contentContainerStyle={androidIosStyles.info}>
                 <Image
                     style={androidIosStyles.img}
                     source={require('./../assets/image/Android-1024x532.jpg')}
@@ -33,14 +33,13 @@ export default function Android({navigation}) {
 
 export const androidIosStyles = StyleSheet.create({
     containerInfo: {
-        textAlign: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#fff',
-        width: '100%'
+        width: "100%",
+        backgroundColor: "#fff"
 
+    },
 
-
+    info: {
+        padding: 30
     },
 
     img: {
